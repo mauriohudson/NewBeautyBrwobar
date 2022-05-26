@@ -1,0 +1,549 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none !important;
+}
+/* ============================================================================================================= */
+/* HEADER */
+/* ============================================================================================================= */
+
+.header {
+    background-color: rgb(255, 255, 255);
+    opacity: .7;
+}
+
+.nav-item {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 27px;
+    }
+  
+.navbar {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F5E9E2;
+    padding: 0;
+    margin: 0;
+    }
+
+/* ============================================================================================================= */
+/* MAIL */
+/* ============================================================================================================= */
+
+.def {
+    height: 100vh;
+    background-image: url(img/qqq.png);
+    background-size: cover;
+}
+
+.home .texto-central {
+    text-align: center;
+    align-items: center;
+}  
+
+.home .container__text {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    text-align: center;
+  }
+
+  .home .container__text h1 {
+    color: aliceblue;
+    font-family: 'Dancing Script', cursive;
+    font-size: 110px;
+    animation: desvanecerseIzquierda 4s ease forwards;
+  }
+
+  .home .container__text p {
+    color: aliceblue;
+    font-family: 'Dancing Script', cursive;
+    font-size: 60px;
+    animation: desvanecerseDerecha 4s ease forwards;
+  }
+
+  @keyframes desvanecerseIzquierda {
+    0% {
+      opacity: 0;
+      transform: translateX(-500px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  @keyframes desvanecerseDerecha {
+    0% {
+      opacity: 0;
+      transform: translateX(500px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+/* ============================================================================================================= */
+/* NOSOTROS */
+/* ============================================================================================================= */
+.imgfluid {
+    box-shadow: 0px 0px 10px 5px rgb(146, 146, 146);
+    animation: desvanecerseIzquierda 4s ease forwards
+}
+
+.nosotros__font {
+    animation: desvanecerseDerecha 4s ease forwards
+}
+
+/* ============================================================================================================= */
+/* SERVICIOS */
+/* ============================================================================================================= */
+
+.servicios {
+    padding-top: 100px;
+    font-family: 'Dancing Script', cursive;
+    border-top: solid 1px white;
+    background-color: #F5E9E2;
+    height: 100vh;
+    max-width: 100%;
+    align-content: center;
+}
+
+.servicios_title {
+    border: solid 2px black;
+}
+
+.nosotros__font p {
+    font-family: 'Dancing Script', cursive;
+}
+
+.nosotros__font{
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ============================================================================================================= */
+/* carta del servicio */
+/* ============================================================================================================= */
+.cartas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 50px;
+}
+
+
+.row {
+    --bs-gutter-x: 0 !important;
+}
+
+.col {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    color: #d1b8c5;
+    border-radius: 20px !important;
+    border: none !important;
+    overflow: hidden;
+}
+
+.cart {
+    background: url(salonimg/depilacion.jpeg) center no-repeat;
+    background-size: cover;
+}
+
+.cart1 {
+    background: url(salonimg/diseño.jpeg) center no-repeat;
+    background-size: cover;
+}
+
+.cart2 {
+    background: url(salonimg/lifting1.jpeg) center no-repeat;
+    background-size: cover;
+}
+
+.card__content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+    background-color: #ffd9edbc;
+    border-top-left-radius: 20px;
+    transform: translateY(255px);
+    transition: transform .25s;
+}
+
+.card__content::before {
+    content: '';
+    position: absolute;
+    top: -47px;
+    right: -45px;
+    width: 100px;
+    height: 100px;
+    transform: rotate(-175deg);
+    border-radius: 50%;
+    box-shadow: inset 48px 48px;
+    color: #ffd9edbc;
+}   
+
+.card__title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+    color: black;
+    line-height: 5px;
+}
+
+.card__subtitle {
+    display: block;
+    font-size: 30px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.card__description {
+    font-size: 30px;
+    color: white;
+    opacity: 0;
+    transition: opacity .10s;
+}
+
+.card:hover .card__content {
+    transform: translateY(0);
+}
+
+.card:hover .card__description {
+    opacity: 1;
+}
+   
+/* ============================================================================================================= */
+/* boton del servicios */
+/* ============================================================================================================= */
+
+/* From uiverse.io by @adamgiebl */
+.servicios__boton {
+    font-family: inherit;
+    font-size: 20px;
+    background: #E3B5A4;
+    color: white;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s;
+   }
+
+   .servicios__a {
+       display: grid;
+       justify-content: center;
+       align-items: center;
+       text-align: center;
+   }
+   
+   .servicios__boton span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+   }
+   
+   .servicios__boton svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+   }
+   
+   .servicios__boton:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+   }
+   
+   .servicios__boton:hover svg {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+   }
+   
+   .servicios__boton:hover span {
+    transform: translateX(5em);
+   }
+   
+   .servicios__boton:active {
+    transform: scale(0.95);
+   }
+   
+   @keyframes fly-1 {
+    from {
+     transform: translateY(0.1em);
+    }
+   
+    to {
+     transform: translateY(-0.1em);
+    }
+   }
+
+
+/* ============================================================================================================= */
+/* FOOTER */
+/* ============================================================================================================= */
+.footer {
+    border-top: solid 2px black;
+    background-color: #F5E9E2;
+    font-family: 'Dancing Script', cursive;
+}
+
+.icon {
+    font-size: 60px;
+}
+
+.iconi {
+    color: #7C878E;
+}
+
+.iconf {
+    color: #7FA9AE;
+}
+
+.iconw {
+    color: #D7A3AB;
+}
+
+.img__footer {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ============================================================================================================= */
+/* SERVICIO OTRA PAG */
+/* ============================================================================================================= */
+
+.servicios__page {
+    background-color: #f0dfc8;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='192' height='192' viewBox='0 0 192 192'%3E%3Cpath fill='%23d7a3ab' fill-opacity='0.4' d='M192 15v2a11 11 0 0 0-11 11c0 1.94 1.16 4.75 2.53 6.11l2.36 2.36a6.93 6.93 0 0 1 1.22 7.56l-.43.84a8.08 8.08 0 0 1-6.66 4.13H145v35.02a6.1 6.1 0 0 0 3.03 4.87l.84.43c1.58.79 4 .4 5.24-.85l2.36-2.36a12.04 12.04 0 0 1 7.51-3.11 13 13 0 1 1 .02 26 12 12 0 0 1-7.53-3.11l-2.36-2.36a4.93 4.93 0 0 0-5.24-.85l-.84.43a6.1 6.1 0 0 0-3.03 4.87V143h35.02a8.08 8.08 0 0 1 6.66 4.13l.43.84a6.91 6.91 0 0 1-1.22 7.56l-2.36 2.36A10.06 10.06 0 0 0 181 164a11 11 0 0 0 11 11v2a13 13 0 0 1-13-13 12 12 0 0 1 3.11-7.53l2.36-2.36a4.93 4.93 0 0 0 .85-5.24l-.43-.84a6.1 6.1 0 0 0-4.87-3.03H145v35.02a8.08 8.08 0 0 1-4.13 6.66l-.84.43a6.91 6.91 0 0 1-7.56-1.22l-2.36-2.36A10.06 10.06 0 0 0 124 181a11 11 0 0 0-11 11h-2a13 13 0 0 1 13-13c2.47 0 5.79 1.37 7.53 3.11l2.36 2.36a4.94 4.94 0 0 0 5.24.85l.84-.43a6.1 6.1 0 0 0 3.03-4.87V145h-35.02a8.08 8.08 0 0 1-6.66-4.13l-.43-.84a6.91 6.91 0 0 1 1.22-7.56l2.36-2.36A10.06 10.06 0 0 0 107 124a11 11 0 0 0-22 0c0 1.94 1.16 4.75 2.53 6.11l2.36 2.36a6.93 6.93 0 0 1 1.22 7.56l-.43.84a8.08 8.08 0 0 1-6.66 4.13H49v35.02a6.1 6.1 0 0 0 3.03 4.87l.84.43c1.58.79 4 .4 5.24-.85l2.36-2.36a12.04 12.04 0 0 1 7.51-3.11A13 13 0 0 1 81 192h-2a11 11 0 0 0-11-11c-1.94 0-4.75 1.16-6.11 2.53l-2.36 2.36a6.93 6.93 0 0 1-7.56 1.22l-.84-.43a8.08 8.08 0 0 1-4.13-6.66V145H11.98a6.1 6.1 0 0 0-4.87 3.03l-.43.84c-.79 1.58-.4 4 .85 5.24l2.36 2.36a12.04 12.04 0 0 1 3.11 7.51A13 13 0 0 1 0 177v-2a11 11 0 0 0 11-11c0-1.94-1.16-4.75-2.53-6.11l-2.36-2.36a6.93 6.93 0 0 1-1.22-7.56l.43-.84a8.08 8.08 0 0 1 6.66-4.13H47v-35.02a6.1 6.1 0 0 0-3.03-4.87l-.84-.43c-1.59-.8-4-.4-5.24.85l-2.36 2.36A12 12 0 0 1 28 109a13 13 0 1 1 0-26c2.47 0 5.79 1.37 7.53 3.11l2.36 2.36a4.94 4.94 0 0 0 5.24.85l.84-.43A6.1 6.1 0 0 0 47 84.02V49H11.98a8.08 8.08 0 0 1-6.66-4.13l-.43-.84a6.91 6.91 0 0 1 1.22-7.56l2.36-2.36A10.06 10.06 0 0 0 11 28 11 11 0 0 0 0 17v-2a13 13 0 0 1 13 13c0 2.47-1.37 5.79-3.11 7.53l-2.36 2.36a4.94 4.94 0 0 0-.85 5.24l.43.84A6.1 6.1 0 0 0 11.98 47H47V11.98a8.08 8.08 0 0 1 4.13-6.66l.84-.43a6.91 6.91 0 0 1 7.56 1.22l2.36 2.36A10.06 10.06 0 0 0 68 11 11 11 0 0 0 79 0h2a13 13 0 0 1-13 13 12 12 0 0 1-7.53-3.11l-2.36-2.36a4.93 4.93 0 0 0-5.24-.85l-.84.43A6.1 6.1 0 0 0 49 11.98V47h35.02a8.08 8.08 0 0 1 6.66 4.13l.43.84a6.91 6.91 0 0 1-1.22 7.56l-2.36 2.36A10.06 10.06 0 0 0 85 68a11 11 0 0 0 22 0c0-1.94-1.16-4.75-2.53-6.11l-2.36-2.36a6.93 6.93 0 0 1-1.22-7.56l.43-.84a8.08 8.08 0 0 1 6.66-4.13H143V11.98a6.1 6.1 0 0 0-3.03-4.87l-.84-.43c-1.59-.8-4-.4-5.24.85l-2.36 2.36A12 12 0 0 1 124 13a13 13 0 0 1-13-13h2a11 11 0 0 0 11 11c1.94 0 4.75-1.16 6.11-2.53l2.36-2.36a6.93 6.93 0 0 1 7.56-1.22l.84.43a8.08 8.08 0 0 1 4.13 6.66V47h35.02a6.1 6.1 0 0 0 4.87-3.03l.43-.84c.8-1.59.4-4-.85-5.24l-2.36-2.36A12 12 0 0 1 179 28a13 13 0 0 1 13-13zM84.02 143a6.1 6.1 0 0 0 4.87-3.03l.43-.84c.8-1.59.4-4-.85-5.24l-2.36-2.36A12 12 0 0 1 83 124a13 13 0 1 1 26 0c0 2.47-1.37 5.79-3.11 7.53l-2.36 2.36a4.94 4.94 0 0 0-.85 5.24l.43.84a6.1 6.1 0 0 0 4.87 3.03H143v-35.02a8.08 8.08 0 0 1 4.13-6.66l.84-.43a6.91 6.91 0 0 1 7.56 1.22l2.36 2.36A10.06 10.06 0 0 0 164 107a11 11 0 0 0 0-22c-1.94 0-4.75 1.16-6.11 2.53l-2.36 2.36a6.93 6.93 0 0 1-7.56 1.22l-.84-.43a8.08 8.08 0 0 1-4.13-6.66V49h-35.02a6.1 6.1 0 0 0-4.87 3.03l-.43.84c-.79 1.58-.4 4 .85 5.24l2.36 2.36a12.04 12.04 0 0 1 3.11 7.51A13 13 0 1 1 83 68a12 12 0 0 1 3.11-7.53l2.36-2.36a4.93 4.93 0 0 0 .85-5.24l-.43-.84A6.1 6.1 0 0 0 84.02 49H49v35.02a8.08 8.08 0 0 1-4.13 6.66l-.84.43a6.91 6.91 0 0 1-7.56-1.22l-2.36-2.36A10.06 10.06 0 0 0 28 85a11 11 0 0 0 0 22c1.94 0 4.75-1.16 6.11-2.53l2.36-2.36a6.93 6.93 0 0 1 7.56-1.22l.84.43a8.08 8.08 0 0 1 4.13 6.66V143h35.02z'%3E%3C/path%3E%3C/svg%3E");;
+}
+
+.lista {
+    font-size: 50px;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+.text-title {
+    font-family: 'Beau Rivage', cursive;
+    font-size: 55px;
+}
+
+.servicios_h1 {
+    font-family: 'Beau Rivage', cursive
+}
+
+.container-1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+
+/* ============================================================================================================= */
+/* GALERIA */
+/* ============================================================================================================= */
+
+
+.gallery_container {
+    padding: 1% 0;
+    max-width: 100%;
+    height: 150vh;
+    gap: 5px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "picture-1 picture-2 picture-3"
+    "picture-4 picture-5 picture-6"
+    "picture-7 picture-8 picture-9"
+    ;
+    }
+
+.picture-1 {
+    background-image: url(./galeria/1.jpeg);
+    background-size: cover;
+    grid-area: picture-1;
+}
+
+.picture-2 {
+    background-image: url(./galeria/2.jpeg);
+    background-size: cover;
+    grid-area: picture-2;
+}
+
+.picture-3{
+    background-image: url(./galeria/3.jpeg);
+    background-size: cover;
+    background-position: center;
+    grid-area: picture-3;
+}
+
+.picture-4{
+    background-image: url(./galeria/4.jpeg);
+    background-size: cover;
+    background-position: center;
+    grid-area: picture-4;
+}
+
+.picture-5{
+    background-image: url(./galeria/5.jpeg);
+    background-size: cover;
+    background-position: center;
+    grid-area: picture-5;
+}
+
+.picture-6{
+    background-image: url(./galeria/6.jpeg);
+    background-size: cover;
+    background-position: center;
+    grid-area: picture-6;
+}
+
+.picture-7{
+    background-image: url(./galeria/7.jpeg);
+    background-size: cover;
+    background-position: center;
+    grid-area: picture-7;
+}
+
+.picture-8{
+    background-image: url(./galeria/8.jpeg);
+    background-size: cover;
+    grid-area: picture-8;
+}
+
+.picture-9{
+    background-image: url(./galeria/9.jpeg);
+    background-size: cover;
+    background-position: center;
+    grid-area: picture-9;
+}
+
+.grid-picture {
+    filter: grayscale(100%);
+}
+
+.grid-picture:hover {
+    filter: grayscale(0%);
+}
+
+
+
+/* ============================================================================================================= */
+/* NOSOTROS */
+/* ============================================================================================================= */
+
+
+.nosotros1 {
+    background-image: url(salonimg/fondonosotros.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.p11 {
+    font-family: 'Beau Rivage', cursive;
+    color: black;
+    font-size: 50px;
+    animation: desvanecerseIzquierda 1s ease forwards;
+}
+
+.p1 {
+    font-family: 'Beau Rivage', cursive;
+    font-size: 30px !important;
+    animation: desvanecerseDerecha 1s ease forwards;
+}
+
+@keyframes desvanecerseIzquierda {
+    0% {
+        opacity: 0;
+        transform: translateX(-500px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes desvanecerseDerecha {
+    0% {
+        opacity: 0;
+        transform: translateX(500px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+
+    .def {
+        height: 100vh;
+        background-image: url(img/qqq.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .container__text h1 {
+        font-size: 50px !important;
+    }
+
+    .container__text p {
+        font-size: 30px !important;
+    }
+
+    .nosotros1 {
+        height: 120vh;
+    }
+
+/* servicios */
+
+    .servicios {
+        height: 180vh;
+    }
+
+ }
+
+ @media only screen and (min-width: 768px) and (max-width: 1199px){
+    .servicios {
+        height: 150vh;
+    }
+
+    .nosotros1 {
+        height: 120vh;
+    }
+ }
+
