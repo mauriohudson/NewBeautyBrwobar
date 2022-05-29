@@ -140,6 +140,25 @@ a {
     align-items: center;
 }
 
+.servicios__pagos {
+    font-family: 'Dancing Script', cursive;
+    position: absolute;
+    margin-left: 200px;
+    margin-top: 8rem;
+}
+
+.servicios__pagos h3 {
+    font-size: 4rem !important;
+}
+
+.img__pago {
+    display: inline-flex;
+    width: 220px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 40px;
+}
+
 /* ============================================================================================================= */
 /* carta del servicio */
 /* ============================================================================================================= */
@@ -386,12 +405,7 @@ input:valid~label {
 
 .iconos {
     display: grid;
-    margin-top: 30px;
-    gap: 35px;
-}
-
-.redes1 {
-    margin-top: 50px;
+    gap: 10px;
 }
 
 .redes {
@@ -629,6 +643,10 @@ input:valid~label {
 
 @media only screen and (min-width: 320px) and (max-width: 768px) {
 
+    .grupo__redes {
+        margin-top: 20px !important;
+    }
+
     .gallery_container {
         padding: 1% 0;
         max-width: 100%;
@@ -687,6 +705,25 @@ input:valid~label {
  }
 
  @media only screen and (min-width: 768px) and (max-width: 1199px){
+
+    .grupito {
+        display: block;
+        margin-bottom: 30px;
+        margin-top: 20px;
+    }
+
+    .g11 {
+        margin-top: 20px !important;
+    }
+
+    .cta {
+        margin-left: 0;
+    }
+
+    textarea {
+        height: 60px;
+    }
+
     .servicios {
         height: 150vh;
     }
