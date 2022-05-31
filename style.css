@@ -385,7 +385,6 @@ textarea {
 }
 
 label {
-    /* font-size: 25px; */
     position: absolute;
     left: 1px;
     bottom: 0;
@@ -410,6 +409,25 @@ input:valid~label {
 
 .redes {
     margin-top: 0.5rem;
+}
+
+.metodoPago {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.pago {
+    margin-top: 20px;
+}
+
+.mercadoPago {
+    width: 30px;
+}
+
+.mercadoPago1 {
+    width: 70px;
 }
 /* ============================================================================================================= */
 /* boton del footer */
@@ -699,7 +717,7 @@ input:valid~label {
 /* servicios */
 
     .servicios {
-        height: 180vh;
+        height: 200vh;
     }
 
  }
